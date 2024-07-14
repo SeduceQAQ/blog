@@ -11,9 +11,12 @@ export default defineConfig({
       port: 80
     }
   },
+  head:[
+      ["link", { rel: "icon", href: "/images/favicon.ico" }],
+  ],
   themeConfig: {
     // siteTitle: "Seduce の Blog",
-    logo: "/logo.jpg",
+    // logo: "/logo.jpg",
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       {text: "Home", link: "/"},
