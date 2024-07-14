@@ -5,7 +5,7 @@ export default defineConfig({
   lang: "en-US",
   title: "Seduce の Blog",
   description: "record some learning and practice",
-  base: "/blog/",
+  // base: "/blog/",
   vite: {
     server: {
       port: 80
