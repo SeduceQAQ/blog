@@ -3,23 +3,31 @@
 layout: home
 
 hero:
-  name: "Seduce の Blog"
-  text: "record some learning and practice"
-  tagline: My great project tagline
+  name: Seduce の Blog
+  text: record something
+  tagline: live and learn
+  #  image:
+  #    src: 
+  #    alt: 
   actions:
     - theme: brand
       text: Markdown Examples
       link: /markdown-examples
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: GitHub
+      link: https://github.com/SeduceQAQ/blog
 
 features:
+  - title: GitHub
+    icon: 😀
+    #    details: XXX
+    link: https://github.com/SeduceQAQ
+    linkText: link to my github
   - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    icon: 🧐
+    details: XXX
   - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    icon: ❤
+    details: XXX
 ---
 
