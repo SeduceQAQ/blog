@@ -1,9 +1,4 @@
-@import "@chinese-fonts/lxgwwenkai/dist/LXGWWenKai-Regular/result.css";
-
 :root {
     --vp-home-hero-name-color: transparent;
     --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe, #41d1ff);
-
-    --vp-font-family-base: LXGW WenKai;
-    --vp-font-family-mono: LXGW WenKai;
 }
