@@ -7,3 +7,11 @@
     --vp-font-family-base: LXGW WenKai;
     --vp-font-family-mono: LXGW WenKai;
 }
+
+.medium-zoom-overlay {
+    z-index: 20;
+}
+
+.medium-zoom-image {
+    z-index: 100 !important;
+}
