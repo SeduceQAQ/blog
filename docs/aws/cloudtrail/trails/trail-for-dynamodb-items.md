@@ -55,7 +55,7 @@ resource "aws_dynamodb_table" "Transactions" {
   }
 }
 
-# 添加测试`item`
+# 添加测试item
 resource "aws_dynamodb_table_item" "item1" {
   table_name = aws_dynamodb_table.Transactions.name
   hash_key   = aws_dynamodb_table.Transactions.hash_key
