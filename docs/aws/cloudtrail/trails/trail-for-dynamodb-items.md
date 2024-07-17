@@ -11,8 +11,6 @@ CloudTrail默认提供的`Event history`仅会记录账户中的管理事件，�
 
 DynamoDB测试表名为：Transactions。 数据格式如下：
 
-其中`transactionId`作为`Partition Key`，`productId`作为`Sort Key`
-
 ```json
 {
   "transactionId": "string",
@@ -22,7 +20,9 @@ DynamoDB测试表名为：Transactions。 数据格式如下：
 }
 ```
 
-为了方便测试，提供Terraform代码创建测试表，并添加测试数据
+其中`transactionId`作为`Partition Key`，`productId`作为`Sort Key`
+
+为了方便测试，提供Terraform代码创建测试表，并添加测试数据。
 
 ::: details Terraform代码
 
@@ -59,7 +59,7 @@ resource "aws_dynamodb_table" "Transactions" {
 resource "aws_dynamodb_table_item" "item1" {
   table_name = aws_dynamodb_table.Transactions.name
   hash_key   = aws_dynamodb_table.Transactions.hash_key
-  range_key = aws_dynamodb_table.Transactions.range_key
+  range_key  = aws_dynamodb_table.Transactions.range_key
   item       = <<ITEM
   {
     "transactionId" : { "S" : "00001" },
@@ -73,7 +73,7 @@ ITEM
 resource "aws_dynamodb_table_item" "item2" {
   table_name = aws_dynamodb_table.Transactions.name
   hash_key   = aws_dynamodb_table.Transactions.hash_key
-  range_key = aws_dynamodb_table.Transactions.range_key
+  range_key  = aws_dynamodb_table.Transactions.range_key
   item       = <<ITEM
 {
     "transactionId" : { "S" : "00002" },
@@ -87,7 +87,7 @@ ITEM
 resource "aws_dynamodb_table_item" "item3" {
   table_name = aws_dynamodb_table.Transactions.name
   hash_key   = aws_dynamodb_table.Transactions.hash_key
-  range_key = aws_dynamodb_table.Transactions.range_key
+  range_key  = aws_dynamodb_table.Transactions.range_key
   item       = <<ITEM
   {
     "transactionId" : { "S" : "00003" },
@@ -101,6 +101,18 @@ ITEM
 
 :::
 
+![](https://picture.seduceqaq.com/piclist/2024/07/17/20240717120505.jpg)
+
 ### 创建Trail
 
-使用Trail跟踪数据事件时，我们可以指定
+使用Trail跟踪数据事件时，我们可以通过配置资源的ARN和数据事件的名称对跟踪事件进行筛选过滤，从而仅记录我们想要跟踪的事件。
+
+具体配置如下：
+
+::: tip
+
+为了方便查看日志，在创建Trail时，勾选了`CloudWatch Logs`选项，将跟踪日志副本发送到CloudWatch中。
+之后我们会在CloudWatch中查看跟踪日志。
+
+:::
+
