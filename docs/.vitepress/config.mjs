@@ -29,6 +29,7 @@ export default defineConfig({
       {
         text: "AWS",
         items: [
+          {text: "ApiGateway", link: "/aws/apigateway"},
           {text: "CloudTrail", link: "/aws/cloudtrail"},
           {text: "DynamoDB", link: "/aws/dynamodb"},
           {text: "Lambda", link: "/aws/lambda"},
@@ -57,6 +58,17 @@ export default defineConfig({
       "/aws/": {
         text: "AWS",
         items: [
+          {
+            text: "ApiGateway",
+            items: [
+              {
+                text: "restapi",
+                items: [
+                  {text: "AllowToReceiveBinaryData", link: "/aws/apigateway/restapi/allow-to-receive-binary-data"},
+                ],
+              },
+            ],
+          },
           {
             text: "CloudTrail",
             items: [
