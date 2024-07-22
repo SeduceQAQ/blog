@@ -134,7 +134,7 @@ ITEM
 
 ![](https://picture.seduceqaq.com/piclist/2024/07/17/20240717150320.jpg)
 
-`DeleteItem`的日志和`UpdateItem`相似，由于是删除操作，仅记录了删除`item`的分区键。
+`DeleteItem`的日志和`UpdateItem`相似，但仅记录了删除`item`的分区键。
 
 ![](https://picture.seduceqaq.com/piclist/2024/07/17/20240717150624.jpg)
 
