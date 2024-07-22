@@ -28,13 +28,14 @@ export default defineConfig({
       {text: "Examples", link: "/markdown-examples"},
       {
         text: "AWS",
-        items: [
-          {text: "ApiGateway", link: "/aws/apigateway"},
-          {text: "CloudTrail", link: "/aws/cloudtrail"},
-          {text: "DynamoDB", link: "/aws/dynamodb"},
-          {text: "Lambda", link: "/aws/lambda"},
-          {text: "Other", link: "/aws/other"},
-        ],
+        // items: [
+        //   {text: "ApiGateway", link: "/aws/apigateway"},
+        //   {text: "CloudTrail", link: "/aws/cloudtrail"},
+        //   {text: "DynamoDB", link: "/aws/dynamodb"},
+        //   {text: "Lambda", link: "/aws/lambda"},
+        //   {text: "Other", link: "/aws/other"},
+        // ],
+        link: "/aws",
         activeMatch: "/aws",
       },
       {
@@ -58,32 +59,48 @@ export default defineConfig({
       "/aws/": {
         text: "AWS",
         items: [
-          {
-            text: "ApiGateway",
-            items: [
-              {
-                text: "restapi",
-                items: [
-                  {text: "AllowToReceiveBinaryData", link: "/aws/apigateway/restapi/allow-to-receive-binary-data"},
-                ],
-              },
-            ],
-          },
-          {
-            text: "CloudTrail",
-            items: [
-              {
-                text: "trails",
-                items: [
-                  {text: "TrailForDynamoDBItems", link: "/aws/cloudtrail/trails/trail-for-dynamodb-items"},
-                ],
-              },
-            ],
-          },
+          {text: "ApiGateway", link: "/aws/apigateway"},
+          {text: "CloudTrail", link: "/aws/cloudtrail"},
           {text: "DynamoDB", link: "/aws/dynamodb"},
           {text: "Lambda", link: "/aws/lambda"},
           {text: "Other", link: "/aws/other"},
         ],
+      },
+      "/aws/apigateway/": {
+        text: "ApiGateway",
+        items: [
+          {text: "REST Api", link: "/aws/apigateway/restapi/allow-to-receive-binary-data"},
+        ],
+      },
+      "/aws/cloudtrail/": {
+        text: "CloudTrail",
+        items: [
+          {
+            text: "Trails",
+            items: [
+              {text: "通过CloudTrail跟踪数据事件", link: "/aws/cloudtrail/trails/trail-for-dynamodb-items"},
+            ],
+          },
+        ],
+      },
+      "/aws/dynamodb/": {
+        text: "DynamoDB",
+        items: [
+          {
+            text:"Streams",
+            items:[
+              {text:"DynamoDB Streams介绍和示例", link:"/aws/dynamodb/streams/streams-to-lambda"},
+            ]
+          }
+        ],
+      },
+      "/aws/lambda/": {
+        text: "AWS",
+        items: [],
+      },
+      "/aws/other/": {
+        text: "AWS",
+        items: [],
       },
       "/python/": {
         text: "Python",

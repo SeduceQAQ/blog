@@ -1,4 +1,4 @@
-# 通过CloudTrail对数据事件的调用进行监控
+# 通过CloudTrail跟踪数据事件
 
 CloudTrail默认提供的`Event history`仅会记录账户中的管理事件，不会跟踪S3和DynamoDB等资源的数据事件（对象级api操作）。
 
