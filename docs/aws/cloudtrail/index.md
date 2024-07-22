@@ -1,3 +1,3 @@
 # CloudTrail
 
-[1. Trails](/aws/cloudtrail/trails)
+[1. Trails](/aws/cloudtrail/trails/index)
