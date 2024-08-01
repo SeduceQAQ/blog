@@ -101,7 +101,7 @@ ITEM
 
 :::
 
-![](https://picture.seduceqaq.com/piclist/2024/07/17/20240717120505.jpg)
+![](https://picture.seduceqaq.com/piclist/2024/08/01/20240801162900.webp)
 
 ### 创建Trail
 
@@ -112,7 +112,7 @@ ITEM
 
 具体配置如下：
 
-![](https://picture.seduceqaq.com/piclist/2024/07/17/20240717142707.jpg)
+![](https://picture.seduceqaq.com/piclist/2024/08/01/20240801163333.webp)
 
 ::: info
 
@@ -127,16 +127,16 @@ ITEM
 
 经过一段时间后，在CloudWatch中出现了相关日志：
 
-![](https://picture.seduceqaq.com/piclist/2024/07/17/20240717144755.jpg)
+![](https://picture.seduceqaq.com/piclist/2024/08/01/20240801163453.webp)
 
 截取`UpdateItem`事件的部分日志，可以看到对哪个`item`进行了更新。
 日志中会记录更新`item`的分区键和更新了哪些属性。
 
-![](https://picture.seduceqaq.com/piclist/2024/07/17/20240717150320.jpg)
+![](https://picture.seduceqaq.com/piclist/2024/08/01/20240801163526.webp)
 
 `DeleteItem`的日志和`UpdateItem`相似，但仅记录了删除`item`的分区键。
 
-![](https://picture.seduceqaq.com/piclist/2024/07/17/20240717150624.jpg)
+![](https://picture.seduceqaq.com/piclist/2024/08/01/20240801163549.webp)
 
 ## 注意
 
